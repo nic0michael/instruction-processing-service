@@ -9,6 +9,13 @@ by this Microservice is sent to the Microservice by an InstructionRequest
 Multiple instructionScripts send in a InstructionRequest are each executed
 thi their own ForthProcessor thread.
 
+## Technical Descrption
+We deliver a Spring Boot Microservice running Java 8
+We code in Java so that users can write executable scripts in the 
+Forth Language
+
+Our Forth Language implementation precompiles your Forth Verbs for
+better performance
 
 ### The Processor is a Virtual CPU with its MicroInstructions running Forth
 A Processor is implemented which uses Forth as its Microinstruction Language
@@ -19,6 +26,11 @@ to be executed by its Virtual CPU as "Forth Programs"
 
 ### The CPU is Multythreaded
 Virtual CPU spawns a ForthProcessor thread to run each instructionScripts
+
+### We extended the Forth language
+This allows us to work with ArrayLists , HashMaps , Talk to Databases
+send messages to Queues
+
 
 ### Multiple BIOS's to select
 Unlike your CPU in your laptop at runtime we choose which BIOS's we want 
