@@ -7,7 +7,7 @@ processing.
 This is a different concept in Microservices where the code to be executed 
 by this Microservice is sent to the Microservice by an InstructionRequest
 Multiple instructionScripts send in a InstructionRequest are each executed
-thi their own ForthProcessor thread.
+in their own ForthProcessor thread.
 
 ## Technical Descrption
 We deliver a Spring Boot Microservice running Java 8
