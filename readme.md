@@ -18,7 +18,16 @@ The InstructionRequest send a List of instructionScripts to this service
 to be executed by its Virtual CPU as "Forth Programs"
 
 ### The CPU is Multythreaded
-Virtual CPU spawns a ForthProcessor thread to run each 
+Virtual CPU spawns a ForthProcessor thread to run each instructionScripts
+
+### Multiple BIOS's to select
+Unlike your CPU in your laptop at runtime we choose which BIOS's we want 
+The BIOS's provide libraries for providing the following functionality:
+- MATHS_BIOS (library)
+- BUSINESS_BIOS (Calculator library)
+- ELECTRICAL_ENGINEERING_BIOS (library)
+- CHEMICAL_ENGINEERING_BIOS (library)
+- ASRTONOMY_BIOS (library)
 
 ## I/O supported
 The InstructionRequest has a Map : ioMap
@@ -53,3 +62,8 @@ aesSalt
 They will not have key values but tell the instruction-processing-service 
 which encryption Key and Salt to use.
 
+
+### Join the team
+This is an exciting project that promises to teach  
+Send email to :
+Architect : Nico Michael : email :  nicomichael2018 AT yahoo DOT COM 
