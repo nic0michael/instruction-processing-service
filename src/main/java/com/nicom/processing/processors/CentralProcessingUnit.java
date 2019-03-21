@@ -18,10 +18,11 @@ public class CentralProcessingUnit {
 
 		long processingTimeInMs;
 		long initialTimeInMs=getCurrentTimeInMs();
+		Forth forth= new Forth();
 		
 		for (String script : instructionScripts) {
 			try {
-				String instructionScriptsResult=Forth.processInput(script);
+				String instructionScriptsResult=forth.processInput(script);
 				instructionScriptsResults.add(instructionScriptsResult);
 			} catch (Exception e) {
 				e.printStackTrace();

@@ -78,6 +78,18 @@ public class VariablesStore {
         }
     }
 
+
+    public String getValueOfVariable( String variableName) {
+        String value = valueStore.get(variableName.toUpperCase());
+        return value;
+    }
+    
+
+    public String getValueOfStringComnstant( String variableName) {
+        String value = valueStore.get(variableName.toUpperCase());
+        return value;
+    }
+
     public int getIntValueOfVariable( String variableName) {
         String value = valueStore.get(variableName.toUpperCase());
         int returnValue = Integer.parseInt(value);
