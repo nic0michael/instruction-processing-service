@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.nicom.processing.dtos.InstructionRequest;
 import com.nicom.processing.dtos.InstructionResponse;
-import com.nicom.processing.processors.ForthProcessor;
+import com.nicom.processing.processors.CentralProcessingUnit;
 import com.nicom.processing.services.InstructionService;
 
 import lombok.extern.java.Log;
@@ -14,7 +14,7 @@ import lombok.extern.java.Log;
 @Service
 public class InstructionServiceImpl  implements InstructionService{@Override
 	public InstructionResponse processInstruction(InstructionRequest instructionRequest) {
-		return ForthProcessor.processInstructions(instructionRequest);
+		return CentralProcessingUnit.processInstructions(instructionRequest);
 	}
 
 }
