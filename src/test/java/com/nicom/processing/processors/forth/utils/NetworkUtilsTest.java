@@ -7,8 +7,10 @@ import static org.hamcrest.Matchers.greaterThan;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
+import java.net.SocketException;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -66,6 +68,30 @@ public class NetworkUtilsTest {
 	public void getHostAddressTest() throws UnknownHostException {
 		String urlStr="www.google.co.za";
 		String hostAddress=NetworkUtils.getHostAddress(urlStr);
+		assertThat(true, is(true));
+	}
+	
+
+	@Test
+	public void getLocalHostNameTest() throws UnknownHostException {
+		String hostname=NetworkUtils.getLocalHostName();
+		System.out.println(hostname);
+		assertThat(true, is(true));
+	}
+	
+	@Test
+	public void getLocalHostIpAddressTest() throws UnknownHostException {
+		String hostname=NetworkUtils.getLocalHostIpAddress();
+		System.out.println(hostname);
+		assertThat(true, is(true));
+	}
+	
+	@Test
+	public void getLocalHostIpAddressesTest()throws  SocketException {
+		List<String> ipAddresses=NetworkUtils.getLocalHostIpAddresses();
+		for (String ipAddress : ipAddresses) {
+			System.out.println(ipAddress);
+		}
 		assertThat(true, is(true));
 	}
 

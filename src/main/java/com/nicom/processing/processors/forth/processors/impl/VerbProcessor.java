@@ -7,6 +7,7 @@ import com.nicom.processing.processors.forth.exceptions.StackIsEmptyException;
 import com.nicom.processing.processors.forth.exceptions.VerbNotInDictionaryException;
 import com.nicom.processing.processors.forth.processors.AbstractProcessor;
 import com.nicom.processing.processors.forth.stack.ForthStack;
+import com.nicom.processing.processors.forth.utils.NetworkUtils;
 import com.nicom.processing.processors.forth.utils.Utilities;
 import com.nicom.processing.processors.forth.variables.VariablesStore;
 
@@ -397,26 +398,26 @@ public class VerbProcessor  extends AbstractProcessor {
                         break;
 
                     case ".COMPUTERNAME":
-                        result.append(Utilities.getComputerName());
+                        result.append(NetworkUtils.getLocalHostName());
                         break;
                     case ".CNAME":
-                        result.append(Utilities.getComputerName());
+                        result.append(NetworkUtils.getLocalHostName());
                         break;
                     case ".COMPUTERIP":
-                        result.append(Utilities.getComputerIpAddress());
+                        result.append(NetworkUtils.getLocalHostIpAddress());
                         break;
                     case ".CIP":
-                        result.append(Utilities.getComputerIpAddress());
+                        result.append(NetworkUtils.getLocalHostIpAddress());
                         break;
 
                     case ".SERVERIP":
                         String serverUlr = stack.pop();
-                        result.append(Utilities.getIpAddressOfHosst(serverUlr));
+                        result.append(NetworkUtils.getInetAddresses(serverUlr));
                         break;
 
                     case ".SIP":
                         String serverUlr2 = stack.pop();
-                        result.append(Utilities.getIpAddressOfHosst(serverUlr2));
+                        result.append(NetworkUtils.getInetAddresses(serverUlr2));
                         break;
 
                     case "!":

@@ -2,10 +2,10 @@ package com.nicom.processing.processors.forth.utils;
 
 import java.net.*;
 import java.io.*;
-
-import java.net.UnknownHostException;
-import java.net.InetAddress;
-
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+// NetworkUtils.getLocalHostName():
 public class NetworkUtils {
 
     private static URL aURL;
@@ -118,5 +118,34 @@ public class NetworkUtils {
     	System.out.println("HostName: "+hostName);
     	return hostName;
     }
+    
+    public static String getLocalHostName() throws UnknownHostException {
+    	return InetAddress.getLocalHost().getHostName();
+    }
 
+    
+    public static String getLocalHostIpAddress() throws UnknownHostException  {
+    	
+    	return InetAddress.getLocalHost().getHostAddress();
+    }
+
+
+    public static List<String> getLocalHostIpAddresses() throws SocketException {
+    	Enumeration e = NetworkInterface.getNetworkInterfaces();
+    	List<String> ipAddresses=new ArrayList();
+    	
+    	while(e.hasMoreElements())
+    	{
+    	    NetworkInterface n = (NetworkInterface) e.nextElement();
+    	    Enumeration ee = n.getInetAddresses();
+    	    while (ee.hasMoreElements())
+    	    {
+    	        InetAddress i = (InetAddress) ee.nextElement();
+    	        System.out.println(i.getHostAddress());
+    	        ipAddresses.add(i.getHostAddress());
+    	    }
+    	}
+    	return ipAddresses;
+    }
+    
 }

@@ -132,21 +132,21 @@ public static boolean isDouble(String val) {
 
     return retval;
 }
-
-public static String getComputerIpAddress() throws UnknownHostException{
-    String ip = InetAddress.getLocalHost().getHostAddress();
-    return ip;
-}
-
-public static String getComputerName() throws UnknownHostException{
-    String computerName = InetAddress.getLocalHost().getHostName();
-    return computerName;
-}
-
-public static String getIpAddressOfHosst(String hostUrl) throws UnknownHostException{
-    String ip = InetAddress.getByName(hostUrl).getHostAddress();
-    return ip;
-}
+//
+//public static String getComputerIpAddress() throws UnknownHostException{
+//    String ip = InetAddress.getLocalHost().getHostAddress();
+//    return ip;
+//}
+//
+//public static String getComputerName() throws UnknownHostException{
+//    String computerName = InetAddress.getLocalHost().getHostName();
+//    return computerName;
+//}
+//
+//public static String getIpAddressOfHosst(String hostUrl) throws UnknownHostException{
+//    String ip = InetAddress.getByName(hostUrl).getHostAddress();
+//    return ip;
+//}
 
 
 
