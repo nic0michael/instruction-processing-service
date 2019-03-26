@@ -15,14 +15,14 @@ import com.nicom.processing.processors.forth.exceptions.LineIsEmptyException;
 public class UtilitiesTest {
 
 
-//    @Test
-//    public void ipAddressTest() throws UnknownHostException{
-//        String expectedIp="151.101.128.81";
-//        String ip=Utilities.getComputerIpAddress();
-//        String computerName = Utilities.getComputerName();
-//        String networkIpAddress = Utilities.getIpAddressOfHosst("bbc.co.uk");
-//        assertThat(networkIpAddress, is(expectedIp));
-//    }
+    @Test
+    public void ipAddressTest() throws UnknownHostException{
+        String expectedIp="151.101.128.81";
+        String ip=Utilities.getComputerIpAddress();
+        String computerName = Utilities.getComputerName();
+        String networkIpAddress = Utilities.getIpAddressOfHosst("bbc.co.uk");
+        assertThat(networkIpAddress, is(expectedIp));
+    }
    
 	
     @Test
